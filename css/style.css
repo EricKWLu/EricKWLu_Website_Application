@@ -1,0 +1,455 @@
+/*Dark colour is #554d56 
+White colour is #f7f7f7*/
+
+
+/*To Do: 
+Get rid of intro_title if they are not used at all
+Get discord logo to copy the id
+If there is time make video games a drop down list with all the games I play, video when it is hovered*/
+
+/*General*/
+body{
+	background-color:#828282;
+	font-family:sans-serif;
+	font-size:16px;
+	line-height:1.6em;
+	margin: 0;
+}
+
+.container{
+	max-width: 70%;
+	width: 900px;
+	margin:auto;
+	padding-top: 50px;
+}
+
+.buffer{
+	padding-top: 50px;
+}
+
+h1 {
+	font-family: "DM Serif Display", serif;
+	font-size: 30px;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+/*Splash screen*/
+
+#intro{
+	position:fixed;
+	z-index:9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	transition: 1s;
+
+	&.intro-load{
+		background-color: #828282;
+	}
+
+	&.intro-exit{
+		top: -150%;
+	}
+}
+
+#yin{
+	color:black;
+}
+
+#yang{
+	color:white;
+}
+
+.intro-header{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+}
+
+.yinyang{
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+}
+
+.yinyang.active{
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.5s;
+}
+
+.yinyang.fade{
+	bottom: 150px;
+	opacity: 0;
+	transition: ease-in-out 0.5s;
+}
+
+/*Navbar design*/
+#navbar{
+	z-index: 999;
+	background-color: #554d56 ;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 50px;
+	position: fixed;
+	top:0;
+	opacity: 0.9;
+
+	&.dark-nav{
+		background-color: #f7f7f7;
+	}
+}
+
+#navbar ul{
+	padding:0;
+	list-style: none;
+	margin:0px;
+}
+
+#navbar li{
+	display:inline;
+}
+
+#navbar a{
+	display: inline-block;
+	color: #f7f7f7;
+	text-decoration: none;
+	font-size: 20px;
+	padding:10px 10px;
+	margin:0;
+}
+
+#navbar a:hover{
+	color: red;
+}
+
+#nav_intro{
+	transition: all 1s ease-out;
+
+	&.dark-nav-intro{
+		color: #554d56;
+	}
+}
+
+#nav_about{
+	transition: all 1s ease-out;
+
+	&.dark-nav-about{
+		color: #554d56;
+	}
+}
+
+#nav_social{
+	transition: all 1s ease-out;
+
+	&.dark-nav-social{
+		color: #554d56;
+	}
+}
+
+#button_container{
+	height:100%;
+	margin: auto;
+	display: inline-block;
+	align-items: center;
+	position: absolute;
+	right:2px;
+	top:6px;
+
+}
+
+#change_button{
+	height: 70%;
+	width:auto;
+	margin:auto;
+	border-radius: 23px;
+	background-color: #554d56 ;
+	color: #f7f7f7;
+	font-family: "DM Serif Display", serif;
+	font-size: 14px;
+	transition: all 1s ease-out;
+
+	&.dark-button{
+		color: #554d56;
+		background-color: #f7f7f7;
+	}
+}
+
+#change_button:hover{
+	border-color: red;
+}
+
+/*Intro design*/
+#intro_container{
+	overflow: hidden;
+	border-radius: 25px;
+	color: #f7f7f7;
+	background-color: transparent ;
+	padding: 20px;
+	position:relative;
+	transition: all 0.5s ease-out;
+	
+
+	&::before, &::after{
+		z-index: -1;
+		content: '';
+		position: absolute;
+		border-radius: 25px;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-color:#554d56 ;
+		transition: all 0.5s ease-out;
+	}
+
+	&::after {
+		display: inline-block;
+		background-color: #f7f7f7;
+		left: 100%;
+	}
+
+	&.dark-intro-container{
+		color: #554d56;
+
+		&::before {
+			left: -100%;
+		}
+
+		&::after{
+			left: 0;
+		}
+	}
+}
+
+#intro_contents{
+	display:inline-block;
+	margin: auto;
+}
+
+#avatar{
+	border-radius: 25px;
+	padding: 20px;
+	background: #f7f7f7;
+	max-width: 30%;
+	height:auto;
+	margin:30px;
+	float:left;
+	padding-right: 30px;
+	transition: all 1s ease-out;
+
+	&.dark-avatar{
+		background: #554d56;
+	}
+}
+
+/*About Me design*/
+#about_container{
+	overflow: hidden;
+	border-radius: 25px;
+	color: #f7f7f7;
+	background-color: transparent;
+	padding: 20px;
+	position:relative;
+	transition: all 0.5s ease-out;
+	
+
+	&::before, &::after{
+		z-index: -1;
+		content: '';
+		position: absolute;
+		border-radius: 25px;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-color:#554d56 ;
+		transition: all 0.5s ease-out;
+	}
+
+	&::after {
+		display: inline-block;
+		background-color: #f7f7f7;
+		left: 100%;
+	}
+
+	&.dark-about-container{
+		color: #554d56;
+
+		&::before {
+			left: -100%;
+		}
+
+		&::after{
+			left: 0;
+		}
+	}
+}
+
+#about_list{
+	text-align: center;
+	font-size: 20px;
+}
+
+#about_container ul{
+	padding:0;
+	list-style: none;
+	margin:0px;
+}
+
+.about_content {
+	border-radius: 25px;
+	margin-bottom: 10px;
+	padding: 20px 0px;
+}
+
+#name {
+	background-color: #f7f7f7;
+	color: #554d56;
+	transition: all 1s ease-out;
+
+	&.dark-name{
+		background-color: #554d56;
+		color: #f7f7f7;
+	}
+}
+
+#degree {
+	background-color: #f7f7f7;
+	color: #554d56;
+	transition: all 1s ease-out;
+
+	&.dark-degree{
+		background-color: #554d56;
+		color: #f7f7f7;
+	}
+}
+
+#hobbies {
+	background-color: #f7f7f7;
+	color: #554d56;
+	transition: all 1s ease-out;
+	overflow: hidden;
+
+	&.dark-hobbies{
+		background-color: #554d56;
+		color: #f7f7f7;
+	}
+}
+
+#nationality {
+	background-color: #f7f7f7;
+	color: #554d56;
+	transition: all 1s ease-out;
+
+	&.dark-nationality{
+		background-color: #554d56;
+		color: #f7f7f7;
+	}
+}
+
+#hot_take {
+	background-color: #f7f7f7;
+	color: #554d56;
+	transition: all 1s ease-out;
+
+	&.dark-hot_take{
+		background-color: #554d56;
+		color: #f7f7f7;
+	}
+}
+
+/*Socials design*/
+#socials_container{
+	overflow: hidden;
+	border-radius: 25px;
+	color: #f7f7f7;
+	background-color: transparent ;
+	padding: 20px;
+	margin-bottom: 30px;
+	position:relative;
+	transition: all 0.5s ease-out;
+	
+
+	&::before, &::after{
+		z-index: -1;
+		content: '';
+		position: absolute;
+		border-radius: 25px;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-color:#554d56 ;
+		transition: all 0.5s ease-out;
+	}
+
+	&::after {
+		display: inline-block;
+		background-color: #f7f7f7;
+		left: 100%;
+	}
+
+	&.dark-socials-container{
+		color: #554d56;
+
+		&::before {
+			left: -100%;
+		}
+
+		&::after{
+			left: 0;
+		}
+	}
+}
+
+#socials_content{
+	display: inline-block;
+	padding:30px;
+}
+
+.s_divider{
+	display:inline-block;
+	width: 33%;
+}
+
+.logo{
+	max-width: 10%;
+	overflow: hidden;
+}
+
+/*Change Layout*/
+@media(max-width:1300px){
+	#avatar{
+		float: none;
+		display:block;
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+
+	#socials_content{
+		display: block;
+	}
+
+	.s_divider{
+		display: block;
+		width: 0;
+	}
+
+	.logo{
+		float: none;
+		display:block;
+		padding-bottom: 20px;
+		max-width: 25%;
+		margin: auto;
+	}
+}

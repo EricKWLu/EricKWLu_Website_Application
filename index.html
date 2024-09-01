@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Eric's Website </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Sans Serif Display Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!--Intro-->
+	<div id="intro">
+		<h1 class="intro-header" >
+			<span class="yinyang" id="yin">Yin</span><span class="yinyang" id="yang"> Yang</span><br>
+		</h1>
+	</div>
+
+	<!-- Navigation Bar -->
+	<nav id="navbar">
+		<ul>
+			<li><a href="#introduction" id="nav_intro">INTRODUCTION</a></li>
+			<li><a href="#about_me" id="nav_about">ABOUT ME</a></li>
+			<li><a href="#socials" id="nav_social">SOCIAL</a></li>
+			<div id="button_container" class="navbar_links"><button id="change_button">CLICK ME!!!</button></div>
+		</ul>
+	</nav>
+
+	<!-- Buffer for Navigation Bar -->
+	<div class="buffer"></div>
+
+	<!-- Intro Section -->
+	<section id="introduction">
+		<div class="container">
+			<div id="intro_container">
+				<h1>Introduction</h1>
+				<p id="intro_contents">
+					<img src="assets/images/magikarp.png" alt="Magikarp Avatar" id="avatar"> <br>
+					Hello, welcome to my website! <br> I’m Eric a first year student at UNSW currently studying Comp Sci/Adv Science. <br><br>My take on the themes of harmony/discord is inspired by the concept of yin and yang. With the colour theme of the website 
+					reflecting the design of yin and yang with dark colours existing in light and vice versa.<br><br>Click on the button in the navigation bar to switch between yin and yang!
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Aboue Me Section -->
+	<section id="about_me">
+		<div class="container">
+			<div id="about_container">
+				<h1>About Me</h1>
+				<br>
+				<ul id = "about_list">
+					<li class="about_content" id="name"><a>🧑Name: Eric</a></li>
+					<li class="about_content" id="degree"><a>🎓Degree: Comp Sci/Adv Science</a></li>
+					<li class="about_content" id="hobbies"><a>🎣Hobbies: Fishing, Piano, Video Games</a></li>
+					<li class="about_content" id="nationality"><a>🌎Nationality: Australian/Singaporean</a></li>
+					<li class="about_content" id="hot_take"><a>🔥🔥🔥Hot Take: Korean food is overrated</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- Socials Section -->
+	<section id="socials">
+		<div class="container">
+			<div id="socials_container">
+				<h1>Socials</h1>
+				<br>
+				<section id="socials_content">
+					<a href="https://www.instagram.com/ericlukw/" target="_blank">
+						<img src="assets/images/instalogo.png" alt="Instagram Logo" class="logo">
+					</a>
+					<div class="s_divider"></div>
+					<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+						<img src="assets/images/youtube.png" alt="Youtube Logo" class="logo">
+					</a>
+					<div class="s_divider"></div>
+					<a href="https://www.facebook.com/profile.php?id=61557499892712" target="_blank">
+						<img src="assets/images/facebook.png" alt="Facebook Logo" class="logo">
+					</a>
+				</section>
+			</div>
+		</div>
+	</section>
+
+	<script src="main.js"></script>
+</body>
+</html>
