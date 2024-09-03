@@ -40,6 +40,7 @@ document.getElementById('change_button').addEventListener('click', function() {
     document.getElementById('nav_intro').classList.toggle('dark-nav-intro');
     document.getElementById('nav_about').classList.toggle('dark-nav-about');
     document.getElementById('nav_social').classList.toggle('dark-nav-social');
+    document.getElementById('games_btn').classList.toggle('dark-games_btn-container');
     document.getElementById('change_button').classList.toggle('dark-button');
     document.getElementById('avatar').classList.toggle('dark-avatar');
     document.getElementById('about_container').classList.toggle('dark-about-container');
@@ -54,6 +55,7 @@ document.getElementById('change_button').addEventListener('click', function() {
 if (JSON.parse(localStorage.getItem('dark-theme-enabled'))) {
     document.body.classList.add('dark-body');
     document.getElementById('intro_container').classList.add('dark-intro-container');
+    document.getElementById('games_btn').classList.add('dark-games_btn-container');
     document.getElementById('introduction').classList.add('dark-intro');
     document.getElementById('navbar').classList.add('dark-nav');
     document.getElementById('nav_intro').classList.add('dark-nav-intro');
@@ -69,3 +71,13 @@ if (JSON.parse(localStorage.getItem('dark-theme-enabled'))) {
     document.getElementById('hot_take').classList.add('dark-hot_take');
     document.getElementById('socials_container').classList.add('dark-socials-container');
 }
+
+document.getElementById('games_btn').addEventListener('click', function() {
+    document.getElementById('valorant_container').classList.toggle('valorant-show');
+    setTimeout(()=>{
+        document.getElementById('helldivers_container').classList.toggle('helldivers-show');
+    },250)
+    setTimeout(()=>{
+        document.getElementById('overwatch_container').classList.toggle('overwatch-show');
+    },500)
+})

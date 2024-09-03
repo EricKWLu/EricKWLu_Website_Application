@@ -299,6 +299,8 @@ h1 {
 }
 
 #about_container ul{
+	width: 100%;
+	height: 100%;
 	padding:0;
 	list-style: none;
 	margin:0px;
@@ -342,6 +344,96 @@ h1 {
 		background-color: #554d56;
 		color: #f7f7f7;
 	}
+}
+
+#games_btn{
+	border: none;
+	background-color: transparent;
+	transition: all 1s ease-out;
+	font-size: 20px;
+	color: #554d56;
+
+	&.dark-games_btn-container{
+		color: #f7f7f7;
+	}
+}
+
+#valorant_container {
+	margin: auto;
+	border-radius: 25px;
+	padding: 0;
+	overflow: hidden;
+	width: 70%;
+	height: 0;
+	background-image: url(../assets/images/valorant_static.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 300px;
+	font-size: 2em;
+	font-weight: bold;
+	transition: all 0.25s ease-in;
+
+	&.valorant-show{
+		height: 300px;
+		margin-bottom: 30px;
+	}
+}
+
+#valorant_container:hover {
+	background-image: url(../assets/images/valorant.gif);
+}
+
+#helldivers_container {
+	margin: auto;
+	border-radius: 25px;
+	padding: 0;
+	overflow: hidden;
+	width: 70%;
+	height: 0;
+	background-image: url(../assets/images/helldivers_static.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 300px;
+	font-size: 2em;
+	font-weight: bold;
+	transition: all 0.25s ease-in;
+
+	&.helldivers-show{
+		height: 300px;
+		margin-bottom: 30px;
+	}
+}
+
+#helldivers_container:hover {
+	background-image: url(../assets/images/helldivers.gif);
+}
+
+#overwatch_container {
+	margin: auto;
+	border-radius: 25px;
+	padding: 0;
+	overflow: hidden;
+	width: 70%;
+	height: 0;
+	background-image: url(../assets/images/overwatch_static.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 300px;
+	font-size: 2em;
+	font-weight: bold;
+	transition: all 0.25s ease-in;
+
+	&.overwatch-show{
+		height: 300px;
+		margin-bottom: 30px;
+	}
+}
+
+#overwatch_container:hover {
+	background-image: url(../assets/images/overwatch.gif);
 }
 
 #nationality {
